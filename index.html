@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>个人中心</title>
+    <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
+</head>
+
+<body class="layui-layout-body">
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header">
+            <div class="layui-logo"><img src="/assets/images/logo.png" alt=""></div>
+            <ul class="layui-nav layui-layout-right">
+                <li class="layui-nav-item">
+                    <a href="javascript:;">
+                        <img src="https://picsum.photos/id/736/200/200" class="layui-nav-img">
+                        贤心
+                    </a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="">基本资料</a></dd>
+                        <dd><a href="">安全设置</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="javascript:;" id="exit"><i class="layui-icon layui-icon-loading"></i>退出</a></li>
+            </ul>
+        </div>
+
+        <div class="layui-side layui-bg-black">
+            <div class="layui-side-scroll">
+                <!-- 添加头像部分 -->
+                <div class="user_pic">
+                    <a href="javascript:;">
+                        <img src="https://picsum.photos/id/736/200/200" class="layui-nav-img">
+                        <span id="welcome">Welcome Rain</span>
+                    </a>
+                </div>
+                <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                <ul class="layui-nav layui-nav-tree" lay-filter="test" lay-shrink="all">
+                    <li class="layui-nav-item " ><a href="/home/dashboard.html" id="index" target="fm" selected><i class="layui-icon layui-icon-star"></i>你的首页</a></li>
+                    <li class="layui-nav-item "  >
+                        <a class="" href="javascript:;" ><i class="layui-icon layui-icon-star"></i>你的奖项</a>
+                        <dl class="layui-nav-child" >
+                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-theme"></i>金马奖</a></dd>
+                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-theme"></i>奥斯卡</a></dd>
+                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-theme"></i>飞天奖</a></dd>
+                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-theme"></i>金鹰奖</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item"  >
+                        <a href="javascript:;" ><i class="layui-icon layui-icon-star"></i>你的作品</a>
+                        <dl class="layui-nav-child" >
+                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-theme"></i>花千骨</a></dd>
+                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-theme"></i>杉杉来了</a></dd>
+                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-theme"></i>楚乔传</a></dd>
+                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-theme"></i>青云志</a></dd>
+                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-theme"></i>陆贞传奇</a></dd>
+                        </dl>
+                    </li>
+
+                    <li class="layui-nav-item">
+                        <a href="javascript:;"><i class="layui-icon layui-icon-star"></i>你的信息</a>
+                        <dl class="layui-nav-child" lay-shrink="all">
+                            <dd><a href="javascript:;" ><i class="layui-icon layui-icon-theme"></i>个人资料</a></dd>
+                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-theme"></i>头像</a></dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="layui-body">
+            <!-- 内容主体区域 -->
+            <iframe name='fm' id="myFrame" src='/home/dashboard.html'  style="width:100%;height: 100%;"></iframe>
+        </div>
+
+        <div class="layui-footer">
+            <!-- 底部固定区域 -->
+            © layui.com - 底部固定区域
+        </div>
+    </div>
+
+
+    
+    <!-- 引入layUI的js文件 -->
+     <script src='/assets/lib/layui/layui.all.js'></script>
+    <!-- 引入jQuery文件 -->
+    <script src='/assets/lib/jquery.js'></script>
+    <!-- 引入自己的js文件 -->
+    <script src='/assets/js/index.js'></script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+.layui-icon{
+    margin-right: 10px;
+}
+
+.layui-icon-theme{
+    margin-left: 30px;
+}
+
+.layui-footer{
+    text-align: center;
+    font-size: 12px;
+}
+.layui-body{
+    overflow: hidden;
+}
+
+/* 渲染头像部分 */
+#welcome{
+    color: goldenrod;
+    font-weight: 700;
+}
+.user_pic{
+    height: 50px;
+    border-bottom: 2px solid #282b33;
+    line-height: 50px;
+    text-align: center;
+}
+
+#exit{
+    display: inline-block;
+}
+
+
+
+
