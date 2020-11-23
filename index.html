@@ -16,8 +16,10 @@
             <ul class="layui-nav layui-layout-right">
                 <li class="layui-nav-item">
                     <a href="javascript:;">
-                        <img src="https://picsum.photos/id/736/200/200" class="layui-nav-img">
-                        贤心
+                        <img src="https://picsum.photos/id/736/200/200" class="layui-nav-img selfpic">
+                        <!-- 用户未设置的头像 -->
+                        <span class="wordpic">M</span>
+                        <span id="titlename"></span>
                     </a>
                     <dl class="layui-nav-child">
                         <dd><a href="">基本资料</a></dd>
@@ -31,11 +33,14 @@
         <div class="layui-side layui-bg-black">
             <div class="layui-side-scroll">
                 <!-- 添加头像部分 -->
-                <div class="user_pic">
-                    <a href="javascript:;">
-                        <img src="https://picsum.photos/id/736/200/200" class="layui-nav-img">
-                        <span id="welcome">Welcome Rain</span>
-                    </a>
+                <div class="user_pic" readOnly user-select:none;>
+                    
+                        <!-- 用户设置的头像 -->
+                        <img src="https://picsum.photos/id/736/200/200"  class="layui-nav-img selfpic" >
+                        <!-- 用户未设置的头像 -->
+                        <span class="wordpic">M</span>
+                        <span id="welcome">Welcome</span>
+                    
                 </div>
                 <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
                 <ul class="layui-nav layui-nav-tree" lay-filter="test" lay-shrink="all">
@@ -63,7 +68,8 @@
                     <li class="layui-nav-item">
                         <a href="javascript:;"><i class="layui-icon layui-icon-star"></i>你的信息</a>
                         <dl class="layui-nav-child" lay-shrink="all">
-                            <dd><a href="javascript:;" ><i class="layui-icon layui-icon-theme"></i>个人资料</a></dd>
+                            <dd><a href="/users/user_msg.html" target="fm"><i class="layui-icon layui-icon-theme"></i>个人信息</a></dd>
+                            <dd><a href="/users/user_pwd.html" target="fm"><i class="layui-icon layui-icon-theme"></i>修改密码</a></dd>
                             <dd><a href="javascript:;"><i class="layui-icon layui-icon-theme"></i>头像</a></dd>
                         </dl>
                     </li>
