@@ -1,0 +1,14 @@
+body,html{
+    padding: 0;
+    margin: 0;
+}
+body{
+    padding: 15px;
+    background: #f2f3f5;
+}
+
+.titlename{
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+}

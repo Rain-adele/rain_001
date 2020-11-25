@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入layUI的css -->
+    <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
+    <!-- 引入自己的css文件 -->
+    <link rel="stylesheet" href="/assets/css/articles/article_type.css">
+</head>
+
+<body>
+    <div class="layui-card">
+        <div class="layui-card-header titlename">文章类别管理<button type="button"
+                class="layui-btn layui-btn-normal layui-btn-sm titlebutton">添加类别</button></div>
+
+        <div class="layui-card-body">
+            <table class="layui-table">
+                <colgroup>
+                    <col width="50">
+                    <col width="">
+                    <col width="">
+                    <col width="200">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>分类名称</th>
+                        <th>分类别名</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 创建模板引擎 -->
+    <script type="text/html" id="tpl">
+    {{each data}}
+    <tr>
+        <td id="id">{{$value.Id}}</td>
+        <td>{{$value.name}}</td>
+        <td>{{$value.alias}}</td>
+        <td>
+            <button type="button" id="edit" data_id="{{$value.Id}}" class="layui-btn layui-btn-radius layui-btn-xs">编辑</button>
+            <button type="button" id="del"  data_id="{{$value.Id}}" class="layui-btn layui-btn-radius layui-btn-xs layui-btn-danger">删除</button>
+        </td>
+      </tr>
+    {{/each}}
+    </script>
+    <!-- 弹出层的表单结构 -->
+    <script type="text/html" id="add_article">
+        <form class="layui-form" id="add_form" style="margin-right:20px;margin-top:20px">
+            <div class="layui-form-item">
+              <label class="layui-form-label">分类名称</label>
+              <div class="layui-input-block">
+                <input type="text" name="name" required  lay-verify="required" placeholder="请输入分类名称" autocomplete="off" class="layui-input">
+              </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">分类别名</label>
+                <div class="layui-input-block">
+                  <input type="text" name="alias" required  lay-verify="required" placeholder="请输入分类别名" autocomplete="off" class="layui-input">
+                </div>
+              </div>
+        </form>
+    </script>
+
+    <!-- 编辑的表单结构 -->
+    <script type="text/html" id="edit_article">
+        <form class="layui-form" id="edit_form" lay-filter="edit_form" style="padding-right:20px;padding-top:30px">
+            <input type="text" name="Id" style="display:none">
+            <div class="layui-form-item">
+              <label class="layui-form-label">分类名称</label>
+              <div class="layui-input-block">
+                <input type="text"  name="name" required  lay-verify="required" autocomplete="off" class="layui-input">
+              </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">分类别名</label>
+                <div class="layui-input-block">
+                  <input type="text"   name="alias" required  lay-verify="required"  autocomplete="off" class="layui-input">
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <div class="layui-input-block">
+                <button type="button" id="edit-btn" class="layui-btn">确认修改</button>
+                <button type="button"  id="reset-btn" class="layui-btn">重置修改</button>
+              </div>
+              </div>
+        </form>
+    </script>
+
+    <!-- 引入layUI的js文件 -->
+    <script src='/assets/lib/layui/layui.all.js'></script>
+    <!-- 引入jQuery文件 -->
+    <script src='/assets/lib/jquery.js'></script>
+    <!-- 引入模板引擎文件 -->
+    <script src='/assets/lib/template-web.js'></script>
+    <!-- 引入自己的js文件 -->
+    <script src='/assets/js/articles/article_type.js'></script>
+</body>
+
+</html>
